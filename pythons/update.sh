@@ -40,7 +40,7 @@ for file in source/*; do
   sha="$(compute_sha2 < "$file")"
   ln -f "$file" "$md5"
   ln -f "$file" "$sha"
-  sed -i -e "/<a $base<\/a>/s/^.*$/<li><a href=\"$sha\">$base<\/a><\/li>/" index.html
+  sed -i -e "/>$base</s/^.*$/<li><a href=\"$sha\">$base<\/a><\/li>/" index.html
 done
 
 # vim:set ft=sh :
