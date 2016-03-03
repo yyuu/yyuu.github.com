@@ -1,4 +1,17 @@
 #!/usr/bin/env bash
+#
+# A script to generate md5sum/sha256sum files and index.html
+#
+# Usage:
+#
+# 1. Modify `./index.html` and add an entry for archive you want to add.
+#    You can omit the sha256sum for the archive this time.
+# 2. Download the archive from origin and save it in `./source`
+# 3. Run `./update.sh`
+# 4. Check diff of `./index.html` if the checksum is calculated properly
+# 5. Commit files with name of `md5sum` and `sha256sum` of the archive
+# 6. Push changes to the origin
+#
 
 set -e
 set -x
